@@ -1,0 +1,32 @@
+server:
+  port: 8083
+
+spring:
+  # Database Configuration (PostgreSQL)
+  datasource:
+    url: jdbc:postgresql://localhost:5432/clothecity_db
+    username: postgres
+    password: oyage_db_password_methana_danna
+    driver-class-name: org.postgresql.Driver
+
+  # Hibernate/JPA Configuration
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  # Email Configuration (Gmail SMTP for OTP)
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: oyage_email@gmail.com
+    password: oyage_gmail_app_password_methana_danna
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
